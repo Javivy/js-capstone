@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .nav-item li a:hover {
-  color: #FF1E1E;
+  color: #ff1e1e;
 }
 
 .title {
