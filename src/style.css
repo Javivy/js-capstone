@@ -87,6 +87,9 @@
   transition: transform 0.4s;
 }
 
+.like-btn > img {
+  height: 2rem;
+}
 
 .img-container > img:hover {
   transform: scale(1.1);
@@ -117,10 +120,6 @@
   transform: scale(1.1);
 }
 
-.like-btn > img {
-  height: 2rem;
-}
-
 .likes-number {
   margin: 0.3rem 0;
 }
@@ -149,7 +148,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   border-radius: 15px;
-  transition: background 0.3s, color 0.3s,  transform 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
   cursor: pointer;
 }
 
