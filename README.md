@@ -1,18 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leaderboard
+# JavaScript Capstone Project - PokeAPI
 
-> Leaderboard, a score list with name and score, made to practice and to put into practice topics and technologies such as HTML, CSS, JavaScript, Webpack, API's, Linters, etc... Saving the data in the local storage and making use of the best practices
+> This is the capstone project of the JavaScript (2nd) Module of Microverse, where, in collaboration with my team, we built a project making use of a REST API, and putting into practice other technologies such as HTML, CSS, JavaScript, Webpack, linters, jest, testing, etc... 
 
 
 ## Built With
 
 - HTML, CSS, JavaScript
-- Webpack, Linters, API's
+- Webpack, Linters, API's, Jest
 
 ## Live Demo
 
-[Live demo to the leaderboard](https://javivy.github.io/leaderboard/dist)
+[Not available yet]()
 
 
 ## Getting Started
@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple example steps. (NPM)
 2. Navigate to the directory where you want your project cloned
 3. Clone the project using `git clone` or just copy the command below:
 ```  
-   git clone https://github.com/Javivy/leaderboard.git
+   git clone https://github.com/Javivy/js-capstone.git
 ```   
 4. Open the project with your IDE. I use [Visual Studio Code](https://code.visualstudio.com/download)
 5. Run `npm install` to get the dependencies
@@ -47,15 +47,20 @@ To get a local copy up and running follow these simple example steps. (NPM)
 - Open the folder with your IDE
 - Get the dependencies with `npm install` 
   - not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-- Read the [Leaderboard API documentation](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) to learn how to use this API.
 
-## Author
+## Authors
 
 👤 **Javivy**
 
 - GitHub: [@Javivy](https://github.com/Javivy)
 - LinkedIn: [Javier Vargas](https://www.linkedin.com/in/javier-alejandro-vargas-ortega)
 - Twitter [@Javivy_2803](https://twitter.com/Javivy_2803)
+
+👤 **Mahdia**
+
+- GitHub: [@MAHDIA001](https://github.com/MAHDIA001)
+- LinkedIn: [Mahdia Naiebi](https://www.linkedin.com/in/mahdia-naiebi-614b23216/)
+- Twitter [@mahdia00734562](https://twitter.com/mahdia00734562/)
 
 ## 🤝 Contributing
 
