@@ -1,5 +1,5 @@
 import heartImg from '../assets/images/heart-icon.png';
-import { addLike, getLikes } from './likesFunction.js';
+import { getLikes } from './likesFunction.js';
 
 const likesArr = getLikes();
 
