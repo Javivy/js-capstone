@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/** HEADER  */
+
+.header {
+  background-color: #00ffd1;
+  box-sizing: border-box;
+  border: #00ffd1 3px solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  margin: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 7rem;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-ul li a:hover {
+  color: #ff3434;
+  border-bottom: 1px solid #ff3434;
+}
+
+.title {
+  font-size: 38px;
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 24px;
+  text-align: center;
+}
+
+/** CARDS  */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #31c6d4;
+  margin: 1rem;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  border: 5px solid #fff;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.img-container > img {
+  border-radius: 20%;
+  height: 7rem;
+  transition: transform 0.4s;
+}
+
+.like-btn > img {
+  height: 2rem;
+}
+
+.img-container > img:hover {
+  transform: scale(1.1);
+}
+
+/* LIKES */
+
+.likes {
+  display: flex;
+  align-self: flex-start;
+  margin: 0 0 0 1rem;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #444;
+  background: #00ffd1;
+  border-radius: 10px;
+}
+
+.like-btn {
+  border: none;
+  background: none;
+  outline: none;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.like-btn:hover {
+  transform: scale(1.1);
+}
+
+.likes-number {
+  margin: 0.3rem 0;
+}
+
+/* POKE NAME */
+
+.poke-name {
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+
+/* BUTTONS */
+
+.buttons-container {
+  display: flex;
+}
+
+.btn {
+  margin: 1rem 0.3rem;
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.reserve-btn {
+  background: #ff1e1e;
+  color: #fff;
+}
+
+.reserve-btn:hover {
+  background: #ad0404;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.comment-btn:hover {
+  background: #444;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/** FOOTER  */
+
+.footer {
+  background-color: #00ffd1;
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  padding: 1rem;
+  font-weight: 400;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  text-align: center;
+}
