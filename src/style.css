@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 /** HEADER  */
@@ -37,7 +37,7 @@
 
 .nav-ul li a {
   text-decoration: none;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
   color: #333;
   font-weight: 500;
@@ -52,7 +52,7 @@
 .title {
   font-size: 38px;
   color: #333;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin: 24px;
   text-align: center;
 }
@@ -129,7 +129,7 @@
 .poke-name {
   color: #fff;
   font-size: 26px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: capitalize;
 }
 
@@ -145,7 +145,7 @@
   border: none;
   outline: none;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   border-radius: 15px;
   transition: background 0.3s, color 0.3s, transform 0.3s;
@@ -168,11 +168,12 @@
   color: #fff;
   transform: scale(1.1);
 }
+
 .title-avatar,
 .title-comment {
   font-size: 34px;
-  color:#eee;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #eee;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-bottom: 15px;
   margin-left: -20px;
   text-align: left;
@@ -221,8 +222,8 @@
   cursor: pointer;
 }
 
-p  {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 18px;
   font-weight: 300;
   color: #eee;
@@ -246,9 +247,9 @@ textarea {
 }
 
 button {
-  border: 2px solid #FFFF00;
+  border: 2px solid #ff0;
   background-color: #333;
-  color: #FFFF00;
+  color: #ff0;
   height: 40px;
   margin-bottom: 30px;
   margin-top: 10px;
@@ -258,17 +259,7 @@ button {
 
 button:hover {
   color: #333;
-  background: #FFFF00;
-}
-
-.footer {
-  background-color: #00ffd1;
-  color: #333;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin: 5px;
-  font-size: 20px;
-  font-weight: 400;
-  border-radius: 10px;
+  background: #ff0;
 }
 
 /** FOOTER  */
@@ -276,7 +267,7 @@ button:hover {
 .footer {
   background-color: #00ffd1;
   color: #333;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
   padding: 1rem;
   font-weight: 400;
