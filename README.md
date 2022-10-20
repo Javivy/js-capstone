@@ -66,7 +66,7 @@ To get a local copy up and running follow these simple example steps. (NPM)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Javivy/to-do-list/issue).
+Feel free to check the [issues page](https://github.com/Javivy/js-capstone/issues).
 
 ## Show your support
 
