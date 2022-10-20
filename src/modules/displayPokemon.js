@@ -1,8 +1,8 @@
+/* eslint-disable linebreak-style */
 import heartImg from '../assets/images/heart-icon.png';
 import { getLikes } from './likesFunction.js';
 
 const likesArr = getLikes();
-
 const displayPokemon = (pokemon, id) => {
   const cardsContainer = document.querySelector('.cards-container');
 
@@ -26,11 +26,12 @@ const displayPokemon = (pokemon, id) => {
   pokeName.classList.add('poke-name');
   buttonsContainer.classList.add('buttons-container');
   reserveBtn.classList.add('btn', 'reserve-btn');
-  commentBtn.classList.add('btn', 'comment-btn');
+  commentBtn.classList.add('btn', 'comment-btn', `comment-${id}`);
 
   pokeImg.src = pokemon.sprites.front_default;
   heartIcon.src = heartImg;
 
+  likesNumber.textContent = '(3)';
   likesArr.then((res) => {
     likesNumber.textContent = `(${res[id - 1].likes})`;
   });

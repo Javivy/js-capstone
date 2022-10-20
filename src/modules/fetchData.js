@@ -1,11 +1,12 @@
+import comments from './comments.js';
 import displayPokemon from './displayPokemon.js';
 
 const createApp = async () => {
-  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
   const data = await fetch(url, {
     method: 'POST',
   });
-  return data.json();
+  console.log(data.json());
 };
 
 const fetchPokemonData = async (id) => {
@@ -17,10 +18,13 @@ const fetchPokemonData = async (id) => {
     });
 };
 
-const fetchPokemons = (number) => {
+const fetchPokemons = async (number) => {
   for (let i = 1; i <= number; i += 1) {
-    fetchPokemonData(i);
+  // eslint-disable-next-line no-await-in-loop
+    await fetchPokemonData(i);
+    comments(i);
   }
 };
 
-export { fetchPokemonData, fetchPokemons, createApp };
+export { createApp };
+export default fetchPokemons;
