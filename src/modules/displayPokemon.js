@@ -22,7 +22,7 @@ const displayPokemon = (pokemon, id) => {
   imgContainer.classList.add('img-container');
   likesContainer.classList.add('likes');
   likeBtn.classList.add('like-btn', `like-btn-${id}`);
-  likesNumber.classList.add('likes-number');
+  likesNumber.classList.add('likes-number', `likes-number-${id}`);
   pokeName.classList.add('poke-name');
   buttonsContainer.classList.add('buttons-container');
   reserveBtn.classList.add('btn', 'reserve-btn');
@@ -31,8 +31,8 @@ const displayPokemon = (pokemon, id) => {
   pokeImg.src = pokemon.sprites.front_default;
   heartIcon.src = heartImg;
 
-  likesNumber.textContent = '(3)';
   likesArr.then((res) => {
+    res = res.sort((a, b) => a.item_id - b.item_id);
     likesNumber.textContent = `(${res[id - 1].likes})`;
   });
   pokeName.textContent = pokemon.name;

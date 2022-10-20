@@ -28,5 +28,5 @@ const fetchPokemons = async (number) => {
   }
 };
 
-export { createApp };
+export { fetchPokemonData, createApp };
 export default fetchPokemons;
