@@ -1,4 +1,10 @@
 import './style.css';
-import { fetchPokemons } from './modules/fetchData.js';
+import  fetchPokemons, { createApp }  from './modules/fetchData.js';
+import comments from './modules/comments.js';
+import { postComments, getco } from './modules/postcomment';
 
-fetchPokemons(9);
+const displayData = async () => {
+  await fetchPokemons(9);
+}
+createApp();
+displayData();
