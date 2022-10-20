@@ -1,19 +1,18 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */
-import { fetchPokemons, fetchPopup } from "./fetchData.js";
+import fetchPopup from './fetchPopup.js';
 
 const comments = (id) => {
   const commentBtn = document.querySelector(`.comment-${id}`);
-  commentBtn.addEventListener("click", (e) => {
-    document.querySelector(".pikachu").style.visibility = "visible";
+  commentBtn.addEventListener('click', () => {
     fetchPopup(id);
   });
-  const popup = document.querySelector('.pikachu');
+  const popup = document.querySelector('.popup-container');
   popup.addEventListener('click', (e) => {
-if(e.target.classList.contains('close-btn')){
-    popup.remove();
-}
+    if (e.target.classList.contains('close-btn')) {
+      document.querySelector('.pikachu').remove();
+    }
   });
 };
 
-export { comments };
+export default comments;

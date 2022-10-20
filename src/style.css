@@ -211,7 +211,6 @@
   right: 0;
   bottom: 0;
   overflow: auto;
-    visibility: hidden;
 }
 
 .close-btn {
