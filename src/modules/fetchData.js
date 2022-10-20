@@ -7,9 +7,9 @@ const createApp = async () => {
   const data = await fetch(url, {
     method: 'POST',
   });
-  console.log(data.json())
-;
+  console.log(data.json());
 }
+const fetchData = async () => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const data = await fetch(url, {
     method: 'POST',
@@ -37,7 +37,6 @@ const fetchPopup = async (id) => {
 
 const fetchPokemons = async (number) => {
   for (let i = 1; i <= number; i += 1) {
-<<<<<<< HEAD
     await fetchPokemonData(i);
     comments(i);
   }
@@ -45,10 +44,3 @@ const fetchPokemons = async (number) => {
 
 export { fetchPopup, createApp };
 export default fetchPokemons
-=======
-    fetchPokemonData(i);
-  }
-};
-
-export { fetchPokemonData, fetchPokemons, createApp };
->>>>>>> c7dbeae912dceaaf4ed47dde8ef401393d5d7b47
