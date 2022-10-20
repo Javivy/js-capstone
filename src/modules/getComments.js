@@ -1,6 +1,11 @@
-const BASE_URL =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/";
-const GAME_ID = "Cm2yx5ZydaTNyC1abT6a";
+const BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const GAME_ID = 'Cm2yx5ZydaTNyC1abT6a';
+
+const getComments = async (itemID) => {
+  const result = await fetch(`${BASE_URL}${GAME_ID}/comments?item_id=item${itemID}`);
+  const data = await result.json();
+  return data;
+};
 
 const addComment = async (username, comment, itemId) => {
   const body = JSON.stringify({
@@ -8,10 +13,10 @@ const addComment = async (username, comment, itemId) => {
     username,
     comment,
   });
-  const headers = { "Content-type": "application/json; charset=UTF-8" };
+  const headers = { 'Content-type': 'application/json; charset=UTF-8' };
 
   const result = await fetch(`${BASE_URL}${GAME_ID}/comments`, {
-    method: "POST",
+    method: 'POST',
     body,
     headers,
   });
@@ -19,4 +24,4 @@ const addComment = async (username, comment, itemId) => {
   return result;
 };
 
-export { addComment };
+export { addComment, getComments };

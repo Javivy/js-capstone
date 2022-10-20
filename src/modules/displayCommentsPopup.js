@@ -1,7 +1,7 @@
-import { addComment } from "./getComments.js";
+import { getComments } from './getComments.js';
 
-const displayComments = (pokemon) => {
-  const array = addComment();
+const displayComments = async (pokemon) => {
+  const comment = getComments(pokemon.id);
   document.querySelector('.popup-container').innerHTML = `
   <div class="pikachu">
 <div class="photo">
@@ -19,16 +19,26 @@ const displayComments = (pokemon) => {
   )}</p>
     </div>
             <h1 class="title-comment">comments</h1>
-    ${array}
+    <p class="all-comments"></p>
     <div class="comments">
     </div>
-    <form action="post">
+    <form action="post" class="form">
         <input type="text" name="name" class="username" required placeholder="Your Name...">
        <textarea name="text" class="text" cols="30" rows="5" placeholder="your comment..." required></textarea>
-       <button type="submit" class="submit">Send your comments</button>
+       <button type="button" class="submit submit-${pokemon.id}">Send your comments</button>
     </form>
   </div>
   `;
+  comment.then((res) => {
+    res.forEach((comment) => {
+      document.querySelector('.all-comments').innerHTML += `
+      <div class="comment-container">
+        <p class="comment">Name: ${comment.username}</p>
+        <p class="comment">${comment.comment}</p>
+        <p class="comment">Date: ${comment.creation_date}</p>
+      </div>`;
+    });
+  });
 };
 
 export default displayComments;
