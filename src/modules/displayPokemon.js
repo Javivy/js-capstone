@@ -21,7 +21,7 @@ const displayPokemon = (pokemon, id) => {
   card.classList.add('card', `card-${id}`);
   imgContainer.classList.add('img-container');
   likesContainer.classList.add('likes');
-  likeBtn.classList.add('like-btn');
+  likeBtn.classList.add('like-btn', `like-btn-${id}`);
   likesNumber.classList.add('likes-number');
   pokeName.classList.add('poke-name');
   buttonsContainer.classList.add('buttons-container');

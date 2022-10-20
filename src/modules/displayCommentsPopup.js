@@ -21,7 +21,7 @@ const displayComments = (pokemon) => {
     <form action="post">
         <input type="text" name="name" required placeholder="Your Name...">
        <textarea name="text" class="text" cols="30" rows="5" placeholder="your comment..." required></textarea>
-       <button type="submit" class="submit">Send your comments</button>
+       <button class="comment-popup-btn" type="submit" class="submit">Send your comments</button>
     </form>
   </div>
   `;

@@ -1,3 +1,4 @@
+import giveLike from './addLikes.js';
 import comments from './comments.js';
 import displayPokemon from './displayPokemon.js';
 
@@ -20,9 +21,10 @@ const fetchPokemonData = async (id) => {
 
 const fetchPokemons = async (number) => {
   for (let i = 1; i <= number; i += 1) {
-  // eslint-disable-next-line no-await-in-loop
+    // eslint-disable-next-line no-await-in-loop
     await fetchPokemonData(i);
     comments(i);
+    giveLike(i);
   }
 };
 
