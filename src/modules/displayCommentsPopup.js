@@ -6,7 +6,7 @@ const displayComments = async (pokemon) => {
   document.querySelector('.popup-container').innerHTML = `
   <div class="pikachu">
 <div class="photo">
-      <a id="close"><img src="https://fabianofrank.github.io/pokemon-api/dist/1c2963ee3467352a1681.png" class="close-btn"></a>
+      <a id="close-${pokemon.id}"><img src="https://fabianofrank.github.io/pokemon-api/dist/1c2963ee3467352a1681.png" class="close-btn close-btn-${pokemon.id}"></a>
       <img src="${
   pokemon.sprites.front_default
 }" class="avatar" alt="Pokemon image">
@@ -26,7 +26,7 @@ const displayComments = async (pokemon) => {
     <form action="post" class="form">
         <input type="text" name="name" class="username" required placeholder="Your Name...">
        <textarea name="text" class="text" cols="30" rows="5" placeholder="your comment..." required></textarea>
-       <button type="button" class="submit submit-${pokemon.id}">Send your comments</button>
+       <button type="button" class="comment-popup-btn submit-${pokemon.id}">Send your comments</button>
     </form>
   </div>
   `;

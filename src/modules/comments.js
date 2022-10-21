@@ -9,8 +9,9 @@ const comments = (id) => {
     await fetchPopup(id);
   });
   const popup = document.querySelector('.popup-container');
+
   popup.addEventListener('click', (e) => {
-    if (e.target.classList.contains('close-btn')) {
+    if (e.target.classList.contains(`close-btn-${id}`)) {
       document.querySelector('.pikachu').remove();
     }
   });

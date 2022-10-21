@@ -19,6 +19,8 @@ const createComment = async (id) => {
       }));
       cmtCount();
     });
+    nameInput.value = '';
+    commentInput.value = '';
   }
 };
 
