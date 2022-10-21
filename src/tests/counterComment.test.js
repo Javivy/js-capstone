@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { getComments } from '../__mocks__/getComments.js';
-
-const createComment = require('../modules/createComment.js');
+import cmtCount from '../__mocks__/countComment.js';
 
 beforeAll(() => {
   document.body.innerHTML = `
@@ -27,7 +26,6 @@ describe('count the number of comments', () => {
     });
   });
   test('return number of comments', () => {
-    const comments = document.querySelectorAll('.comment-container');
-    expect(comments.length).toBe(2);
+    expect(cmtCount()).toBe(2);
   });
 });
