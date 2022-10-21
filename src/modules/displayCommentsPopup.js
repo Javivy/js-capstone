@@ -1,11 +1,14 @@
-const displayComments = (pokemon) => {
+import { getComments } from './getComments.js';
+
+const displayComments = async (pokemon) => {
+  const comment = getComments(pokemon.id);
   document.querySelector('.popup-container').innerHTML = `
   <div class="pikachu">
 <div class="photo">
-      <a id="close"><img src="https://fabianofrank.github.io/pokemon-api/dist/1c2963ee3467352a1681.png" class="close-btn"></a>
+      <a id="close-${pokemon.id}"><img src="https://fabianofrank.github.io/pokemon-api/dist/1c2963ee3467352a1681.png" class="close-btn close-btn-${pokemon.id}"></a>
       <img src="${
   pokemon.sprites.front_default
-}" class="avatar" alt="Pokemont image">
+}" class="avatar" alt="Pokemon image">
     </div>
     <div class="info">
         <h1 class="title-avatar">${pokemon.name}</h1>
@@ -16,15 +19,26 @@ const displayComments = (pokemon) => {
   )}</p>
     </div>
             <h1 class="title-comment">comments</h1>
+    <p class="all-comments"></p>
     <div class="comments">
     </div>
-    <form action="post">
-        <input type="text" name="name" required placeholder="Your Name...">
+    <form action="post" class="form">
+        <input type="text" name="name" class="username" required placeholder="Your Name...">
        <textarea name="text" class="text" cols="30" rows="5" placeholder="your comment..." required></textarea>
-       <button class="comment-popup-btn" type="submit" class="submit">Send your comments</button>
+       <button type="button" class="comment-popup-btn submit-${pokemon.id}">Send your comments</button>
     </form>
   </div>
   `;
+  comment.then((res) => {
+    res.forEach((comment) => {
+      document.querySelector('.all-comments').innerHTML += `
+      <div class="comment-container">
+        <p class="comment">Name: ${comment.username}</p>
+        <p class="comment">${comment.comment}</p>
+        <p class="comment">Date: ${comment.creation_date}</p>
+      </div>`;
+    });
+  });
 };
 
 export default displayComments;
