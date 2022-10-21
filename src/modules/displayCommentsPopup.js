@@ -1,4 +1,5 @@
 import { getComments } from './getComments.js';
+import cmtCount from './countComment.js';
 
 const displayComments = async (pokemon) => {
   const comment = getComments(pokemon.id);
@@ -18,7 +19,7 @@ const displayComments = async (pokemon) => {
     (type) => type.type.name,
   )}</p>
     </div>
-            <h1 class="title-comment">comments</h1>
+            <h1 class="title-comment">comments <span class="total-comments"></span></h1>
     <p class="all-comments"></p>
     <div class="comments">
     </div>
@@ -29,7 +30,7 @@ const displayComments = async (pokemon) => {
     </form>
   </div>
   `;
-  comment.then((res) => {
+  await comment.then((res) => {
     res.forEach((comment) => {
       document.querySelector('.all-comments').innerHTML += `
       <div class="comment-container">
@@ -39,6 +40,8 @@ const displayComments = async (pokemon) => {
       </div>`;
     });
   });
+
+  cmtCount();
 };
 
 export default displayComments;
