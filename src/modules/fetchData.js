@@ -1,13 +1,14 @@
+/* eslint-disable no-unused-vars */
 import giveLike from './addLikes.js';
 import comments from './comments.js';
 import displayPokemon from './displayPokemon.js';
+import { addComment } from './getComments.js';
 
 const createApp = async () => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
   const data = await fetch(url, {
     method: 'POST',
   });
-  console.log(data.json());
 };
 
 const fetchPokemonData = async (id) => {
