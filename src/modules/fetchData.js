@@ -3,6 +3,7 @@ import giveLike from './addLikes.js';
 import comments from './comments.js';
 import displayPokemon from './displayPokemon.js';
 import { addComment } from './getComments.js';
+import cmtCount from './countComment.js';
 
 const createApp = async () => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';

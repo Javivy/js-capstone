@@ -20,7 +20,6 @@ const addComment = async (username, comment, itemId) => {
     body,
     headers,
   });
-  console.log(result.headers);
   return result;
 };
 
