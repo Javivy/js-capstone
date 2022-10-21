@@ -36,6 +36,12 @@
   gap: 15px;
 }
 
+.items-counter > a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .nav-ul li a {
   text-decoration: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -43,6 +49,10 @@
   color: #333;
   font-weight: 500;
   transition: color 0.3s, border-bottom 0.3s;
+}
+
+.items-counter > a:hover {
+  text-decoration: underline;
 }
 
 .nav-ul li a:hover {
@@ -294,14 +304,4 @@ textarea {
   font-size: 14px;
   color: #ff1e1e;
   font-weight: bold;
-}
-
-.items-counter > a {
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.items-counter > a:hover {
-  text-decoration: underline;
 }
