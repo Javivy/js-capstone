@@ -13,19 +13,19 @@ const displayComments = async (pokemon) => {
     </div>
     <div class="info">
         <h1 class="title-avatar">${pokemon.name}</h1>
-        <p class="weight">Weight: ${pokemon.weight}</p>
-        <p class="height">Height: ${pokemon.height} </p>
-        <p class="power">Types: ${pokemon.types.map(
+        <p class="weight">Weight: <span class="span span-weight">${pokemon.weight}</span></p>
+        <p class="height">Height: <span class="span span-height">${pokemon.height}</span> </p>
+        <p class="power">Types: <span class="span span-powers">${pokemon.types.map(
     (type) => type.type.name,
-  )}</p>
+  )}</span></p>
     </div>
             <h1 class="title-comment">comments <span class="total-comments"></span></h1>
     <p class="all-comments"></p>
     <div class="comments">
     </div>
     <form action="post" class="form">
-        <input type="text" name="name" class="username" required placeholder="Your Name...">
-       <textarea name="text" class="text" cols="30" rows="5" placeholder="your comment..." required></textarea>
+       <input type="text" name="name" class="username" required placeholder="Your Name...">
+       <textarea name="text" class="text" cols="30" rows="5" placeholder="Your comment..." required></textarea>
        <button type="button" class="comment-popup-btn submit-${pokemon.id}">Send your comments</button>
     </form>
   </div>
@@ -34,8 +34,8 @@ const displayComments = async (pokemon) => {
     res.forEach((comment) => {
       document.querySelector('.all-comments').innerHTML += `
       <div class="comment-container">
-        <p class="comment">Name: ${comment.username}</p>
-        <p class="comment">${comment.comment}</p>
+        <p class="comment-name">Name: ${comment.username}</p>
+        <p class="comment-content">${comment.comment}</p>
         <p class="comment">Date: ${comment.creation_date}</p>
       </div>`;
     });

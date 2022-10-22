@@ -181,15 +181,32 @@
   transform: scale(1.1);
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title-avatar,
 .title-comment {
   font-size: 34px;
-  color: #eee;
+  color: #444;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-bottom: 15px;
   margin-left: -20px;
   text-align: left;
+  margin-top: 1rem;
   text-transform: capitalize;
+  background: #ececec;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.weight,
+.height,
+.power {
+  font-weight: bold;
 }
 
 .photo {
@@ -211,19 +228,69 @@
   align-items: center;
 }
 
-.pikachu {
+.all-comments {
   display: flex;
   flex-direction: column;
+  width: 40%;
+  justify-content: center;
   align-items: center;
-  background-color: #333;
-  position: fixed;
-  height: 100%;
+  background: #ff1e1e;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ad0404;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 90%;
+  margin: 1rem 0;
+}
+
+.comment-container > p {
+  padding: 0.4rem 0;
+}
+
+.comment-name {
+  border-bottom: 2px solid #00ffd1;
+}
+
+.comment-content {
+  font-weight: bold;
+}
+
+.popup-container {
+  background: rgba(124, 122, 122, 0.38);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(124, 122, 122, 0.3);
   width: 100%;
-  top: 0;
+  height: 100%;
+  position: fixed;
+  padding: 2rem;
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-y: scroll;
+  z-index: 2;
+  display: none;
+}
+
+.pikachu {
+  margin: 0 auto;
+  display: flex;
+  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
   overflow: auto;
+  padding: 1rem;
+  animation: flipCard 0.6s forwards ease-in-out;
 }
 
 .close-btn {
@@ -244,18 +311,23 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  width: 40%;
 }
 
-input {
+input, textarea {
   border: none;
   border-radius: 8px;
-  height: 30px;
+  padding: 0.4rem;
+  width: 100%;
+  font-size: 20px;
+  margin: 1rem 0;
 }
 
 textarea {
-  border: none;
-  border-radius: 8px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 10rem;
+  max-height: 10rem;
 }
 
 .comment-popup-btn {
@@ -304,4 +376,36 @@ textarea {
   font-size: 14px;
   color: #ff1e1e;
   font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes flipCard {
+  from {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
 }
