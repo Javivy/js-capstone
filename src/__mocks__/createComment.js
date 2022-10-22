@@ -1,4 +1,4 @@
-import { addComment, getComments } from './getComments';
+import { addComment, getComments } from './getComments.js';
 
 const createComment = async (id, name, content) => {
   document
