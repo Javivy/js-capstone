@@ -1,31 +1,29 @@
 /* eslint-disable no-unused-vars */
 import { getComments } from '../__mocks__/getComments.js';
 import cmtCount from '../__mocks__/countComment.js';
+import createComment from '../__mocks__/createComment.js';
 
 beforeAll(() => {
   document.body.innerHTML = `
     <div class="all-comments">
-        <div class="comment-container">
-            <p class="comment">Name: Javier</p>
-            <p class="comment">Test</p>
-            <p class="comment">2022-10-10</p>
-        </div>
-        <div class="comment-container">
-            <p class="comment">Name: Javier</p>
-            <p class="comment">Test</p>
-            <p class="comment">2022-10-10</p>
-        </div>
     </div>
     `;
 });
 
 describe('count the number of comments', () => {
-  test('It should fetch 2 comments', () => {
-    getComments(2).then((res) => {
-      expect(res.length).toBe(2);
+  test('It should fetch 6 comments', () => {
+    getComments(2).then(async (res) => {
+      res = await res.length;
+      expect(res).toBe(6);
     });
   });
-  test('return number of comments', () => {
-    expect(cmtCount()).toBe(2);
+
+  test('It should count 0 comments', () => {
+    expect(cmtCount()).toBe('There are 0 comments');
+  });
+
+  test('It should count 3 comments', () => {
+    createComment(3);
+    expect(cmtCount()).toBe(3);
   });
 });
