@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Not available yet]()
+[Live demo to our project](https://javivy.github.io/js-capstone/dist/)
 
 
 ## Getting Started
