@@ -230,7 +230,7 @@
 .all-comments {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background: #ff1e1e;
@@ -246,7 +246,7 @@
   background-color: #ad0404;
   padding: 1rem;
   border-radius: 1rem;
-  max-width: 90%;
+  width: 90%;
   margin: 1rem 0;
 }
 
@@ -407,5 +407,55 @@ textarea {
   to {
     transform: rotateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 937px) {
+  /** FOOTER */
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .items-counter {
+    position: static;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /** HEADER */
+  .header {
+    border-bottom-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+  }
+
+  /** CARDS CONTAINER */
+  .cards-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  /** FORM COMMENTS */
+  form {
+    width: 90%;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem;
+    width: 100%;
+    font-size: 20px;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  /** CARDS CONTAINER */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
   }
 }
