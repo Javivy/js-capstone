@@ -7,7 +7,14 @@ const createComment = async (id) => {
     const nameInput = document.querySelector('.username');
     const commentInput = document.querySelector('.text');
     document.querySelector(`.submit-${id}`).addEventListener('click', async () => {
-      await addComment(nameInput.value, commentInput.value, id);
+      const comment = await addComment(nameInput.value, commentInput.value, id);
+      if (comment.status === 201) {
+        const successMsg = document.querySelector('.success-msg');
+        successMsg.style.display = 'block';
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 3000);
+      }
       document.querySelector('.all-comments').innerHTML = '';
       await getComments(id).then((res) => res.forEach((comment) => {
         document.querySelector('.all-comments').innerHTML += `
@@ -18,9 +25,9 @@ const createComment = async (id) => {
       </div>`;
       }));
       cmtCount();
+      nameInput.value = '';
+      commentInput.value = '';
     });
-    nameInput.value = '';
-    commentInput.value = '';
   }
 };
 
