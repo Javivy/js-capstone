@@ -1,5 +1,5 @@
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const gameID = 'mfTY6xSEPGJWB98yLZBq';
+const gameID = 'f7pBySdERg8bKCzinUCC';
 
 const getLikes = async () => {
   try {

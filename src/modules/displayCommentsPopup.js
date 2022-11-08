@@ -28,6 +28,10 @@ const displayComments = async (pokemon) => {
        <textarea name="text" class="text" cols="30" rows="5" placeholder="Your comment..." required></textarea>
        <button type="button" class="comment-popup-btn submit-${pokemon.id}">Send your comments</button>
     </form>
+    <div class="messages">
+      <p class="msg success-msg visible">Comment added successfully!</p>
+      <p class="msg error-msg visible">You must write your name and content of the comment</p>
+    </div>
   </div>
   `;
   await comment.then((res) => {

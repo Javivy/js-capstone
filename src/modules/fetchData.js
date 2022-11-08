@@ -10,6 +10,7 @@ const createApp = async () => {
   const data = await fetch(url, {
     method: 'POST',
   });
+  return data;
 };
 
 const fetchPokemonData = async (id) => {
