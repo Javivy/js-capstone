@@ -451,7 +451,8 @@ textarea {
 }
 
 @keyframes showMessage {
-  from, to {
+  from,
+  to {
     transform: translateY(150%);
     opacity: 0;
   }
