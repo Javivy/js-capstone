@@ -356,10 +356,19 @@ textarea {
   background: #ff0;
 }
 
+.messages {
+  position: absolute;
+  bottom: 31px;
+  display: flex;
+  justify-content: center;
+  width: 38%;
+}
+
 .msg {
-  padding: 0.5rem;
-  border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
+  width: 100%;
+  border-radius: 1rem;
   margin: 1rem 0;
 }
 
@@ -367,14 +376,14 @@ textarea {
   background: #15ff00;
   color: #000;
   font-weight: bold;
-  animation: showMessage 2s forwards ease-in-out;
+  animation: showMessage forwards 3s ease-in-out;
 }
 
 .error-msg {
   background: #ff2323;
   color: #fff;
   font-weight: bold;
-  animation: showMessage 2s forwards ease-in-out;
+  animation: showMessage 3s forwards ease-in-out;
 }
 
 .visible {
@@ -443,7 +452,7 @@ textarea {
 
 @keyframes showMessage {
   from, to {
-    transform: translateY(100%);
+    transform: translateY(150%);
     opacity: 0;
   }
 
